@@ -1,0 +1,823 @@
+@import url('normalize.css');
+
+@orange: #ef6f03;
+@gris: #676461;
+@hover: underline;
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+@font-face {
+    font-family: 'OverlockRegular';
+    src: url('../font/Overlock/Overlock-Regular-OTF-webfont.eot');
+    src: url('../font/Overlock/Overlock-Regular-OTF-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Overlock/Overlock-Regular-OTF-webfont.woff') format('woff'),
+         url('../font/Overlock/Overlock-Regular-OTF-webfont.ttf') format('truetype'),
+         url('../font/Overlock/Overlock-Regular-OTF-webfont.svg#OverlockRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AftasansRegular';
+    src: url('../font/Afta/AftaSansThin-Regular-webfont.eot');
+    src: url('../font/Afta/AftaSansThin-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Afta/AftaSansThin-Regular-webfont.woff') format('woff'),
+         url('../font/Afta/AftaSansThin-Regular-webfont.ttf') format('truetype'),
+         url('../font/Afta/AftaSansThin-Regular-webfont.svg#AftasansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+//PROPRIETES COMMUNES //
+.span9 {
+	width: 754px;
+}
+
+.none{
+	display: none;
+}
+
+html {
+	background: url('../img/bg/body2.png') repeat;
+}
+
+body {
+	background: url('../img/bg/body.png') repeat;
+	margin: 0 auto;
+	font-size: 16px;
+	font-family: 'OverlockRegular';
+	color: @orange;
+	max-width: 940px;
+}
+#body-accueil nav .menu,
+#body-unite nav .unite,
+#body-portraits nav .portraits, 
+#body-collabo nav .portraits,
+#body-recherche nav .recherche,
+#body-enseignement nav .enseignement,
+#body-publications nav .publications,
+#body-theses nav .publications,
+#body-contact nav .contact
+{
+	background: url('../img/icones/spriteIcons.png') no-repeat 6px -50px;
+	height: 28px;
+}
+
+
+header {
+	.container {
+		background: url('../img/bg/header.png') no-repeat;
+		position: relative;
+		height: 400px;
+
+		h1 {
+			background-color: white;
+			position: absolute;
+			box-shadow: 0px 2px 2px #777;
+			padding: 0.2em 0em;
+			margin-top: 1em;
+			margin-left: 0em;
+
+			img {
+				margin-left: 2em;
+			}
+		}
+
+		.img {
+			position: relative;
+			float: right;
+			left: -5em;
+			top: 4em;
+			margin-left: 0em;
+
+			img {
+				border: 2px solid white;
+			}
+		}
+
+		.langue {
+			position: absolute;
+			text-align: right;
+			margin: 0em;
+			left: -4.8em;
+			top: 0.3em;
+
+			.anglais {
+				border-right: 1px solid white;
+				padding-right: 0.5em;
+			}
+
+			a {
+				color: white;
+				padding-left: 0.5em;
+			}
+		}
+
+		p {
+			color: white;
+			margin-left: 4.5em;
+			margin-top: 10em;
+			text-align: justify;
+			text-shadow: 2px 2px 2px #555;
+
+			a {
+				text-align: right;
+				text-decoration: none;
+				color: white;
+				float:right;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		nav {
+			background: url('../img/bg/nav.png') repeat;
+			clear: both;
+			padding: 1em 0.5em 0.5em 0.5em;
+			box-shadow: 0px 2px 2px #777;
+			width: 820px;
+			margin: 0 auto;
+			position: relative;
+			top: 0.7em;
+			z-index: 1;
+
+			a {
+				position: relative;
+				padding: 0em 0.8em;
+				color: @orange;
+				text-decoration: none;
+				text-transform: uppercase;
+				display: inline-block;
+				height: 26px;
+				font-size: 18px;
+
+				&:hover {
+					background: url('../img/icones/spriteIcons.png') no-repeat 6px -50px;
+					height: 28px;
+				}
+			}
+		}
+
+		.search {
+
+			position: relative;
+			.rounded-corners;
+
+			form {
+				position: absolute;
+				top: -2.1em;
+				left: 44em;
+			}
+
+			input {
+				box-shadow: 2px 2px 2px #777;
+				padding: 0.45em;
+				font-family: "OverlockRegular";
+				font-size: 16px;
+			}
+
+			button{
+				background: url('../img/icones/spriteIcons.png') no-repeat -205px -6px;
+				text-indent: -9999px;
+				width: 45px;
+				height: 35px;
+				border-radius: 0px 5px 5px 0px;
+				margin-left: -2.9em;
+				border: none;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+.content {
+	margin-left: 5em;
+}
+
+section.container {
+	padding: 3em 0;
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 26px;
+		font-weight: normal;
+		margin-bottom: 1em;
+		margin-top: 0.2em;
+	}
+
+	h2:after {
+		content:"";
+		background: url('../img/icones/spriteIcons.png') no-repeat -9px -70px;
+		display: block;
+		height: 28px;
+		margin-top: -0.2em;
+		width: 50px;
+	}
+
+	h3 {
+		margin: 0em;
+		text-transform: uppercase;
+		font-family: "AftasansRegular";
+		text-decoration: underline;
+	}
+
+	p {
+		margin-top: 0.8em;
+		color: @gris;
+		font-family: 'AftasansRegular';
+		font-size: 14px;
+	}
+}
+
+footer {
+	background: url('../img/bg/footer.png') repeat;
+	color: white;
+	font-size: 14px;
+	padding: 1.5em 0;
+	font-family: 'AftasansRegular';
+
+	.container {
+		div {
+			margin-left: 5em;
+			position: relative;
+
+			img {
+				position: absolute;
+				top: -0.6em;
+				left: -2.4em;
+			}
+		}
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.plan {
+		margin-left: 8em;
+		margin-right: 2em;
+	}
+
+	.adresse a {
+		color: white;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	h3 {
+		margin-bottom: -0.7em;
+		font-size: 18px;
+		font-family: 'OverlockRegular';
+	}
+
+	ul {
+		margin: 0em;
+		padding-left: 0em;
+	}
+
+	li {
+		list-style-type: none;
+	}
+}
+
+.copy {
+	text-align: center;
+	font-family: 'AftasansRegular';
+	font-size: 14px;
+	padding: 0.5em;
+	margin: 0em;
+	background: url('../img/bg/body2.png') repeat;
+	color: @gris;
+}
+
+// ACCUEIL //
+.accueil {
+	background: url('../img/icones/arriereAccueil.png') no-repeat;
+	background-position: 450px 38px;
+}
+
+#events {
+	margin-left: 0px;
+
+	.event-list {
+		margin-top: -1em;
+	}
+}
+
+#news {
+	margin-left: 6em;
+
+	.new {
+		margin-top: 0.5em;
+		border-bottom: 1px solid @orange;
+		padding-bottom: 0.4em;
+	}
+
+	time {
+		padding-right: 1em;
+	}
+
+	time:after {
+		content:"";
+		background: url('../img/icones/spriteIcons.png') no-repeat -221px -68px;
+		position: absolute;
+		width: 6px;
+		height: 28px;
+		margin-left: 0.45em;
+		margin-top: 0.5em;
+	}
+
+	strong {
+		font-family: 'AftasansRegular';
+	}
+}
+
+// FIN ACCUEIL //
+// UNITE //
+.unite {
+	background: url('../img/icones/arriereUnite.png') no-repeat;
+	background-position: 650px 220px;
+}
+
+#a-propos {
+
+	a {
+		color: @orange;
+	}
+
+	p {
+		text-align: justify;
+		margin: 0em;
+	}
+
+	ul {
+		float: left;
+		font-family: 'AftasansRegular';
+		font-size: 14px;
+		text-align: justify;
+		padding: 0em;
+		margin-left: 2em;
+
+		li {
+			list-style-image: url('../img/icones/point.png');
+			color: @gris;
+			padding: 0.2em 0;
+
+			a {
+				display: block;
+				padding-top: 0.2em;
+				margin: 0em;
+			}
+		}
+	}
+
+	.col-gauche {
+		margin: 0;
+		border-right: 1px solid @orange;
+		padding-right: 3em;
+		margin-left: 2.6em;
+	}
+
+	.col-droite {
+		margin-left: 3em;
+	}
+}
+
+#domaines-interets {
+	clear: both;
+	position: relative;
+	top: 2em;
+}
+// FIN UNITE //
+// PORTRAITS //
+.portraits {
+	background: url('../img/icones/arrierePortraits.png') no-repeat;
+	background-position: 500px 380px;
+}
+
+#equipe {
+	
+	height: 320px;
+
+	div {
+		.rounded-corners;
+		background-color: rgba(237,111, 13, 0.3);
+		height: 200px;
+		padding: 0.8em ;
+		box-shadow: 2px 2px 2px #777;
+		text-align: center;
+		margin-right: 2.4em;
+		margin-left: 0em;
+		position: relative;
+		margin-bottom: 2em;
+
+		&.active {
+			background-color: @orange;
+
+			p {
+				color: white;
+			}
+		}
+
+		a {
+			.rounded-corners;	
+			color: white;
+			cursor: pointer;
+			background-color: @orange;
+			position: absolute;
+			padding: 0.2em 0.5em;
+			width: 90px;
+			top: 13.2em;
+			left: 1.9em;
+			margin-bottom: 2em;
+		}
+
+		&.g-martinot {
+			margin-right: 0em;
+		}
+
+		p {
+			color: @orange;
+
+			&.name {
+				font-size: 15px;
+			}
+		}
+
+		.details {
+			background: @orange;
+			.rounded-corners; 
+			box-shadow: none;
+			position: absolute;
+			margin-left: -0.8em;
+			margin-bottom: 0em;
+			text-align: left;
+			height: 0px;
+			top: 14.5em;
+
+			.close {
+				background: url('../img/icones/close.png') no-repeat;
+				text-indent: -9999px;
+				position: absolute;
+				width: 31px;
+				height: 30px;
+				opacity: 1;
+				top: -0.8em;
+				left: 53.5em;
+			}
+		}
+	}
+}
+
+.a-remacle .details {
+	margin-left: -13.6em;
+}
+
+.p-larrouy .details {
+	margin-left: -26.2em;
+}
+
+.g-martinot .details {
+	margin-left: -39em;
+}
+
+#collaborateurs {
+	div {
+		width: 75px;
+		height: 152px;
+		float: left;
+		text-align: center;
+		padding: 0.7em;
+
+		p {
+			color: @orange;
+			font-size: 14px;
+		}
+
+		&.mGaspar {
+			margin-left: 0em;
+		}
+
+		a {
+			color: @orange;
+		}
+
+		&:hover {
+			background-color: @orange;
+			.rounded-corners;
+
+			.name{
+				color: white;
+			}
+		}
+	}
+}
+
+// FIN PORTRAITS /
+// RECHERCHE //
+.recherche {
+	background: url('../img/icones/arriereRecherche.png') no-repeat;
+	background-position: -130px 350px;
+}
+
+#carte {
+	position: relative;
+	height: 450px;
+
+	h2 {
+		clear: both;
+	}
+	img {
+		position: absolute;
+	}
+	.paris, .philadelphie, .montreal, .marseille, .londres, .anvers, .gand, .rhenanie {
+		position: relative;
+		width: 100px;
+	}
+
+	.paris {
+		top: 4em;
+		left: 21.5em;
+	}
+
+	.philadelphie {
+		top: 3em;
+		left: 13em;
+	}
+
+	.montreal {
+		top: -3em;
+		left: 13.8em;
+	}
+
+	.marseille {
+		top: -6.5em;
+		left: 22.8em;	
+	}
+
+	.londres {
+		top: -12em;
+		left: 20em;
+	}
+
+	.anvers {
+		top: -17em;
+		left: 21.8em;
+	}
+
+	.gand {
+		top: -21em;
+		left: 20.8em;
+	}
+
+	.marqueur {
+		position: relative;
+
+		&:hover {
+
+			.ville span {
+				z-index:1;
+			}
+		}
+	}
+}
+
+.informations {
+	top: 30em;
+	position: absolute;
+
+	h4 {
+		margin: 0;
+	}
+
+	p {
+		margin-left: 8.5em;
+	}
+
+	img {
+		float: left;
+		display: block;
+		margin-right: 1em;
+		margin-top: 0.5em;
+
+		&.deux {
+			margin-top: -1em;
+		}
+	}
+}
+
+.ville span {
+	background: url('../img/bulle-info.png') no-repeat;	
+	background: url('../img/bulle-info.png') no-repeat;	
+	width: 90px;
+	height: 34px;
+	display: block;
+	text-align: center;
+	padding-top: 0.4em;
+	font-size: 14px;
+	font-family: "OverlockRegular";
+	color: white;
+	text-transform: uppercase;
+	opacity: 0;
+	position: absolute;
+	top: -1em;
+	left: -1.6em;
+}
+
+.ville:hover {
+	text-decoration: none;
+}
+// FIN RECHERCHE //
+
+// ENSEIGNEMENT //
+.enseignement {
+	background: url('../img/icones/arriereEnseignement.png') no-repeat;
+	background-position: 520px 320px;
+}
+
+#enseignement{
+
+	td {
+		font-family: "AftasansRegular";
+		font-size: 15px;
+		padding: 1em;
+	}
+
+	tr {
+		border-bottom: 1px solid @orange;
+
+		&:last-child {
+			border: none;
+		}
+
+		a {
+			margin-top: 0em;
+			float: left;
+		}
+	}
+
+	.prof {
+		width: 100px;
+	}
+
+	.heures {
+		width: 28px;
+	}
+
+	.type {
+		width: 36px;
+	}
+
+	.cours {
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	a {
+		color: @orange;
+		text-decoration: underline;
+		float: right;
+		margin-top: 3em;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+// FIN ENSEIGNEMENT //
+// PUBLICATIONS //
+.publications {
+	background: url('../img/icones/arrierePublications.png') no-repeat;
+	background-position: 0px 60px;
+}
+
+section.container ul {
+	font-family: "AftasansRegular";
+	font-size: 14px;
+
+	li {
+		padding: 0.2em 0em;
+		list-style-image: url('../img/icones/point.png');
+	}
+	a {
+		color:@orange;
+	}
+
+	p {
+		margin: 0em;
+	}
+}
+
+#theses {
+	font-family: "AftasansRegular";
+
+	h4 {
+		margin: 0em;
+	}
+
+	q:before {
+		content: '« ';
+	}
+
+	q:after {
+		content: ' »';
+	}
+
+	a {
+		font-size: 14px;
+		color: @orange;
+	}
+}
+// PUBLICATIONS //
+// CONTACT //
+.contact {
+	background: url('../img/icones/arriereContact.png') no-repeat;
+	background-position: -10px 400px;
+}
+
+#contact {
+	position: relative;
+
+	.plan:before {
+		content:'';
+		display: block;
+		background: url('../img/icones/coin.png') no-repeat;
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 24.2em;
+		left: -0.2em;
+	}
+
+	.plan:after {
+		content:'';
+		display: block;
+		background: url('../img/icones/coin2.png') no-repeat;
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 4em;
+		left: 46.7em;
+	}
+
+	.bureau-fac {
+		margin-left: 5.5em;
+	}
+
+	div + div {
+		margin: 0em;
+		padding-right: 1em;
+		height: 300px;
+
+		h3 {
+			text-transform: capitalize;
+			font-family: "OverlockRegular";
+		}
+
+		&:last-child {
+			padding-right: 0em;
+		}
+
+		p {
+			text-align: left;
+			margin: 0em;
+
+			a {
+				color: @orange;
+			}
+		}
+	}
+}
+
+#acces {
+	p {
+		margin-top: 0em;
+	}
+
+	a{
+		color: @orange;
+	}
+}
+// CONTACT //
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+}
