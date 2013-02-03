@@ -2,12 +2,14 @@
 <html lang="en-US">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maxium-scale=1">
         <meta name="description" content="Unité Logopédie de la voix - Contact">
 		
 		<title>Unité Logopédie de la Voix &ndash; Contact</title>
 		
 		<link rel="shortcut icon" type="image/png" href="img/icones/favicon.png"/>	
-		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/normalize.css" rel="stylesheet" type="text/css">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -16,14 +18,13 @@
 	<body id="body-contact">
 		<h1 class="none">Page contact</h1>
 		<section class="topbar">
-			<h1 class="none">Section topbar</h1>
-				<header>
+			<header>
+				<h1>
+					<a href="index.html" rel="home">
+						<img src="img/logo.png" alt="Logo Unité Logopédie de la Voix" width="147" height="89">
+					</a>
+				</h1>
 				<div class="container">
-					<h1 class="span12">
-						<a href="index.html">
-							<img src="img/logo.png" alt="Logo Unité Logopédie de la Voix" width="147" height="89">
-						</a>
-					</h1>
 					<div class="img span6">
 						<img class="img-header" src="img/uniteLogo2.jpg" alt="Unité Logopédie de la Voix" width="1600" height="951">
 					</div>
@@ -32,10 +33,10 @@
 						<a href="#">Français</a>
 					</div>
 					<p class="description span3">
-						L’unité Logopédie de la voix a vu le jour en octobre 2008. Elle est une des finalités de la section logopédie. L’unité Logopédie de la Voix est incluse dans le département 1 de la Faculté de Psychologie et des Sciences de l’Education de l’Université de Liège.
+						L’unité Logopédie de la voix a vu le jour en octobre 2008. Elle est une des finalités de la section logopédie et est incluse dans le département 1 de la Faculté de Psychologie et des Sciences de l’Education de l’Université de Liège.
 						<br/><a href="unite.html">En savoir plus</a>
 					</p>
-					<h1 class="none">Section navigation</h1>
+					<h1 class="none">Espace de navigation</h1>
 					<nav>
 						<h1 class="none">Menu</h1>
 						<a href="index.html" class="menu">Accueil</a>	
@@ -56,60 +57,60 @@
 			</header>
 		</section>
 		<section class="container contact">
-			<h1 class="none">Section container</h1>
+			<h1 class="none">Les différents moyens de contact</h1>
 			<div class="content span10">
 				<article id="contact">
 					<h2>Contactez-nous</h2>
 					<div class="plan">
 						<img src="img/mapULV.png" alt="Carte du bureau facultataire à Rue de l'Aunaie, 30 - 4000 Sart Tilman">
 					</div>
-					<div class="bureau-fac span3">
+					<div class="adr bureau-fac span3">
 						<h3>Bureau facultataire</h3>
 						<p>
-							Site universitaire
-							<br> B38 &ndash; Rue de l'Aunaie, 30
-							<br>4000 Sart Tilman
+							<span>Site universitaire</span>
+							<br> B38 &ndash; <span class="street-address">Rue de l'Aunaie, 30</span>
+							<br><span class="postal-code">4000</span> <span class="locality">Sart Tilman</span> 
 						</p>
 						<br>
-						<p>
+						<p class="vcard">
 							<a href="mailto:Dominique.morsomme@ulg.ac.be" title="Contactez Dominique Morsomme">Dominique.morsomme@ulg.ac.be</a>
-							Tel : 04/366.51.76
+							<a href="+3243665176">Tel : 04/366.51.76</a>
 						</p>
-						<p>
+						<p class="vcard">
 							<a href="mailto:Pauline.larrouy@ulg.ac.be" title="Contactez Pauline Larrouy">Pauline.larrouy@ulg.ac.be</a>
-							<br>Tel : 04/366.58.62
+							<br><a href="+3243665862">Tel : 04/366.58.62</a>
 						</p>
-						<p>
+						<p class="vcard">
 							<a href="mailto:Angelique.Remacle@ulg.ac.be" title="Contactez Angélique Remacle">Angelique.Remacle@ulg.ac.be</a>
-							<br>Tel : 04/366.58.62
+							<br><a href="+3243665862">Tel : 04/366.58.62</a>
 						</p>
 					</div>
-					<div class="span3">
-						<h3>Secrétaire exécutive</h3>
-						<p><strong>France Dartois</strong></p>
+					<div class="vcard span3">
+						<h3 class="title">Secrétaire exécutive</h3>
+						<p class="fn"><strong>France Dartois</strong></p>
 						<p>
-							Boulevard du Rectorat,5
-							<br>4000 &ndash; Sart Tilman
+							<span class="street-address">Boulevard du Rectorat,5</span>
+							<br><span class="postal-code">4000</span> &ndash; <span class="locality">Sart Tilman</span>
 						</p>
 						<br>
 						<p>
 							<a href="mailto:France.dartois@ulg.ac.be" title="Contactez France Dartois">France.dartois@ulg.ac.be</a>
-							<br>Tel : 04/366.20.16 
+							<br><a href="tel:+3243662016">Tel : 04/366.20.16 </a>
 							<br>Fax : 04/366.28.59
 						</p>
 					</div>
-					<div class="span3">
-						<h3>Secrétaire</h3>	
-						<p><strong>Nathalie Deprez</strong></p>
+					<div class="vcard span3">
+						<h3 class="title">Secrétaire</h3>	
+						<p class="fn"><strong>Nathalie Deprez</strong></p>
 						<p>
-							Boulevard du Rectorat,5
-							<br>4000 &ndash; Sart Tilman
+							<span class="street-address">Boulevard du Rectorat,5</span>
+							<br><span class="postal-code">4000</span> &ndash; <span class="locality">Sart Tilman</span>
 						</p>
 						<br>
 						<p>
 							<a href="mailto:ndeprez@ulg.ac.be" title="Contactez Nathalie Deprez">ndeprez@ulg.ac.be</a>
-							<br>Tel : 04/366.91.17
-							<br>ou 04/366.20.26 
+							<br><a href="tel:+3243669117">Tel : 04/366.91.17</a>
+							<br>ou <a href="+3243662026">04/366.20.26</a>
 						</p>
 					</div>
 				</article>
@@ -151,7 +152,8 @@
 				</article>
 			</div>
 		</section>		
-			<section class="footer">
+		<section class="footer">
+			<h1 class="none">Espace pied de page - Dernières news, plan du site et adresse</h1>
 			<footer>
 				<div class="container">
 					<div class="publications  span3">
@@ -161,15 +163,15 @@
 						</p>
 						<ul>
 							<li>
-								<date>03/12</date>
+								<time>03/12</time>
 								<a href="index.html#news">Nouveau site internet !</a>
 							</li>
 							<li>
-								<date>05/01</date>
+								<time>05/01</time>
 								<a href="index.html#news">Nouvelle collaboration !</a>
 							</li>
 							<li>
-								<date>12/02</date>
+								<time>12/02</time>
 								<a href="index.html#news">Publication de D.Morsomme</a>
 							</li>
 						</ul>
@@ -187,7 +189,7 @@
 								<a href="unite.html">L'unité</a>
 							</li>
 							<li>
-								<a href="equipe.html">Notre équipe</a>
+								<a href="portraits.html">Portraits</a>
 							</li>
 							<li>
 								<a href="recherche.html">Recherche</a>
@@ -204,16 +206,20 @@
 						</ul>
 					</div>
 					<div class="adresse span3">
-						<h3>Bureau facultataire</h3>
+						<h3>Bureau facultaire</h3>
 						<p>
 							<img src="img/icones/message.png" alt="Icone message" width="80" height="80">
 						</p>
-						<p>
-							Site universitaire du Sart Tilman 38B
-							Rue de l'Aunaie, 30 - 4000 Sart Tilman
+						<p class="adr">
+							<span class="locality">Site universitaire du Sart Tilman 38B</span>
+							<span class="street-address">Rue de l'Aunaie, 30</span> - 
+							<span class="postal-code">4000</span> <span class="locality">Sart Tilman</span>
 						</p>
-						<p>Tel&nbsp;: 04/366.51.76</p>
-						<p><a title="envoyer un mail à Dominique Morsomme" href="mailto:Dominique.morsomme@ulg.ac.be">Dominique.morsomme@ulg.ac.be</a></p>
+						<div class="vcard dominiqueM">
+							<p class="fn">Dominique Morsomme</p>
+							<p><a class="tel" href="tel:+3243665176">Tel&nbsp;: 04/366.51.76</a></p>
+							<p><a class="email" title="envoyer un mail à Dominique Morsomme" href="mailto:Dominique.morsomme@ulg.ac.be">Dominique.morsomme@ulg.ac.be</a></p>	
+						</div>
 					</div>
 				</div>
 			</footer>
